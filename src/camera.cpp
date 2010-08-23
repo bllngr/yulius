@@ -2,25 +2,22 @@
 #include <iosfwd>
 #include <cmath>
 
-namespace math3d
+camera::camera(double fovx)
+: fovx_(fovx)
+{}
+
+void
+camera::calc_dist(double width)
 {
-	camera::camera(double const& fovx)
-	: fovx_(fovx)
-	{}
+	distance_ = (width/2.0)/tan((fovx_/2.0)*(M_PI/180.0));
+}
 
-	void
-	camera::calc_dist(double const& width) const
-	{
-		distance_ = (width/2.0)/tan((fovx_/2.0)*(M_PI/180.0));
-	}
+double
+camera::get_dist() const
+{
+	return distance_;
+}
 
-	double
-	camera::get_dist() const
-	{
-		return distance_;
-	}
-
-	camera::~camera()
-	{
-	}
+camera::~camera()
+{
 }
