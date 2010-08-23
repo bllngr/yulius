@@ -33,8 +33,8 @@
 			if(t > 0.000001)
 			{
 				// tmin = t;
-				// sr.normal = (temp + t*r.d)/radius_;
-				// sr.local_hit_point = r.o + t*r.d;
+				// sr.normal = (temp + t * r.d)/radius_;
+				// sr.local_hit_point = r.o + t * r.d;
 				return true;
 			}
 
@@ -43,8 +43,8 @@
 			if(t > 0.000001)
 			{
 				// tmin = t;
-				// sr.normal = (temp + t*r.d)/radius_;
-				// sr.local_hit_point = r.o + t*r.d;
+				// sr.normal = (temp + t * r.d)/radius_;
+				// sr.local_hit_point = r.o + t * r.d;
 				return true;
 			}
 		}

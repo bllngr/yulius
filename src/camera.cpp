@@ -13,7 +13,7 @@ camera::calc_dist(double width)
 }
 
 void
-camera::calc_dist(double const& width) 
+camera::calc_dist(double width) 
 {
 	distance_ = (width/2.0)/tan((fovx_/2.0)*(M_PI/180.0));
 }
