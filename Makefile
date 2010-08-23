@@ -29,7 +29,8 @@ HEADER =\
 	include/vector.hpp \
 	include/point.hpp \
 	include/matrix.hpp \
-        $(NULL)
+	include/sphere.hpp \
+	$(NULL)
 
 SOURCE =\
 	src/glutwindow.cpp \
@@ -40,6 +41,7 @@ SOURCE =\
 	src/vector.cpp \
 	src/matrix.cpp \
 	src/main.cpp \
+	src/sphere.cpp \
 	$(NULL)
 
 PROGRAMSOURCE =\
