@@ -9,9 +9,8 @@ namespace math3d
 	{
 		public:
 			camera(double const&);
-			void calc_dist(double const& width) const;
+			void calc_dist(double const& width);
 			double get_dist() const;
-			
 			double get_pos();
 			
 			~camera();
