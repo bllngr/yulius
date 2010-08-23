@@ -30,7 +30,6 @@ HEADER =\
 	include/point.hpp \
 	include/matrix.hpp \
 	include/sphere.hpp \
-	include/camera.hpp \
 	include/ray.hpp \
 	include/camera.hpp \
 	include/shader.hpp \
@@ -53,7 +52,6 @@ SOURCE =\
 	src/sphere.cpp \
 	src/main.cpp \
 	src/sphere.cpp \
-	src/camera.cpp \
 	$(NULL)
 
 PROGRAMSOURCE =\
