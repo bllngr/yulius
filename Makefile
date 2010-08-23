@@ -30,12 +30,13 @@ HEADER =\
 	include/point.hpp \
 	include/matrix.hpp \
 	include/sphere.hpp \
+<<<<<<< HEAD
 	include/ray.hpp \
 	include/camera.hpp \
 	include/shader.hpp \
 	include/scene.hpp \
 	include/tracer.hpp \
-        $(NULL)
+	$(NULL)
 
 SOURCE =\
 	src/glutwindow.cpp \
@@ -51,6 +52,7 @@ SOURCE =\
 	src/tracer.cpp \
 	src/sphere.cpp \
 	src/main.cpp \
+	src/sphere.cpp \
 	$(NULL)
 
 PROGRAMSOURCE =\

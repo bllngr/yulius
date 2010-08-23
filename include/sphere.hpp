@@ -8,22 +8,18 @@
 #include "vector.hpp"
 #include "ray.hpp"
 
-namespace math3d
-{
 	class sphere
 	{
 		public:
-			sphere(point const&, double const&);
+			sphere(math3d::point const&, double const&);
 			~sphere();
 
 			bool hit(ray const&) const;
 		
 		private:
 			double radius_;
-			point center_;
+			math3d::point center_;
 	};
-}
-
 
 
 #endif //SPHERE_HPP

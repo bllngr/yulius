@@ -5,21 +5,18 @@
 #include "point.hpp"
 #include "vector.hpp"
 
-namespace math3d
+class ray
 {
-	class ray
-	{
-		public:
-			point o;
-			vector d;
+	public:
+		math3d::point o;
+		math3d::vector d;
 
-		public:
-			ray(point const& p, vector const& v)
-			:o(p), d(v)
-			{};
-			~ray();
+	public:
+		ray(math3d::point const& p, math3d::vector const& v)
+		:o(p), d(v)
+		{};
+		~ray();
 
-	};
-}
+};
 
-#endif //RAY_HPP
+#endif // RAY_HPP

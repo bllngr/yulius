@@ -2,22 +2,20 @@
 #define TRACER_HPP
 
 #include "ray.hpp"
-#include "scnene.hpp"
+#include "scene.hpp"
 #include "rgb.hpp"
 
-namespace math3d
+class tracer
 {
-	class tracer
-	{
-		public:
-			tracer();
-			tracer(scene*);
-			~tracer();
+	public:
+		tracer();
+		tracer(scene*);
+		~tracer();
 
-			virtual rgb trace_ray(ray const&) const;
+		virtual rgb trace_ray(ray const&) const;
 
-		protected:
-			scene* scene_ptr;
-	};
-}
+	protected:
+		scene* scene_ptr;
+};
+
 #endif
