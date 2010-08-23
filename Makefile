@@ -30,7 +30,6 @@ HEADER =\
 	include/point.hpp \
 	include/matrix.hpp \
 	include/sphere.hpp \
-<<<<<<< HEAD
 	include/ray.hpp \
 	include/camera.hpp \
 	include/shader.hpp \
