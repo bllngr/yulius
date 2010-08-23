@@ -9,7 +9,6 @@ class camera
 		camera(double);
 		void calc_dist(double width);
 		double get_dist() const;
-		
 		double get_pos();
 		
 		~camera();
