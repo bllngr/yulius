@@ -15,7 +15,8 @@ class ray
 		ray(math3d::point const& p, math3d::vector const& v)
 		:o(p), d(v)
 		{};
-		~ray();
+		~ray()
+		{}
 
 };
 
