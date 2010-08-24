@@ -1,5 +1,4 @@
 .DS_Store
-*.o
-*.swp
+*.[o,swp,ppm]
 main
 bin/
