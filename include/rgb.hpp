@@ -4,32 +4,31 @@
 // header, system
 #include <iosfwd>
 
-
 class rgb {
 public : // enums, typedefs
-  enum component {r, g, b};
-  typedef float value_t;
+	enum component {r, g, b};
+	typedef float value_t;
  
 public : // c'tor
-  rgb();
-  rgb(rgb const&);
-  rgb(value_t r, value_t g, value_t b); 
+	rgb();
+	rgb(rgb const&);
+	rgb(value_t r, value_t g, value_t b); 
 
-  ~rgb();
+	~rgb();
 
 public : // methods
-  void swap(rgb&);
-  void print(std::ostream& os) const;
+	void swap(rgb&);
+	void print(std::ostream& os) const;
 
-  value_t&       operator[](enum component);
-  const value_t& operator[](enum component) const;
+	value_t&       operator[](enum component);
+	const value_t& operator[](enum component) const;
 
-  rgb& operator= (const rgb&);
-  void operator+=(const rgb&);
+	rgb& operator= (const rgb&);
+	void operator+=(const rgb&);
 
 
 private: // members
-  value_t data_[3]; // rgb
+	value_t data_[3]; // rgb
 };
 
 rgb operator+(const rgb& a, const rgb& b);

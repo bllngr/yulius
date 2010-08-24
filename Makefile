@@ -32,9 +32,6 @@ HEADER =\
 	include/sphere.hpp \
 	include/ray.hpp \
 	include/camera.hpp \
-	include/shader.hpp \
-	include/scene.hpp \
-	include/tracer.hpp \
 	$(NULL)
 
 SOURCE =\
@@ -46,12 +43,8 @@ SOURCE =\
 	src/vector.cpp \
 	src/matrix.cpp \
 	src/camera.cpp \
-	src/shader.cpp \
-	src/scene.cpp \
-	src/tracer.cpp \
 	src/sphere.cpp \
 	src/main.cpp \
-	src/sphere.cpp \
 	$(NULL)
 
 PROGRAMSOURCE =\

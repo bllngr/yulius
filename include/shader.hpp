@@ -5,19 +5,18 @@
 #include "rgb.hpp"
 #include "vector.hpp"
 
-	class shader
-	{
-		public:
-			bool hit_an_object;
-			point local_hit_point;
-			vector normal;
-			rgb clr;
-			scene& scn;
+class shader
+{
+	public:
+		bool hit_an_object;
+		math3d::point local_hit_point;
+		math3d::vector normal;
+		rgb clr;
+		// scene& scn;
 
-		public:
-			shader(scene&);
-			~shader();
+	public:
+		// shader(scene&);
+		~shader();
+};
 
-	};
-
-#endif //SHADER_HPP
+#endif // SHADER_HPP

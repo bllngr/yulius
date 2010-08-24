@@ -1,6 +1,8 @@
 #include <glutwindow.hpp>
 #include <ppmwriter.hpp>
 #include <pixel.hpp>
+#include <sphere.hpp>
+#include <camera.hpp>
 
 #include <iostream>
 #include <boost/thread/thread.hpp>
@@ -28,18 +30,47 @@ public :
 		ppmwriter pw(gw.width(), gw.height(), "./checkerboard.ppm");
 
 		// for all pixels of window
-		for (std::size_t y = 0; y < gw.height(); ++y) {
+		//    v size_t
+		for (size_t y = gw.height() - 1; y > 0; --y) {
 			for (std::size_t x = 0; x < gw.width(); ++x) {
-		 
+
+				// create cam
+				math3d::point cam(0., 0., -40.);
+
 				// create pixel at x,y
 				pixel p(x, y);
 
-				// compute color for pixel
-				if ( ((x/checkersize)%2) != ((y/checkersize)%2)) {
-					p.color = rgb(1.0, 1.0, float(x)/gw.height());
-				} else {
-					p.color = rgb(1.0, 0.0, float(y)/gw.width());
+				// 2d point for imaginary view plane
+				math3d::point vp_pos( x - .5 * gw.width() + .5, y - .5 * gw.height() + .5, 0.0 );
+				ray r(vp_pos, vp_pos - cam);
+
+				// test for intersection
+				sphere s(math3d::point(0.0, 0.0, 0.0), 60.0);
+				sphere u(math3d::point(0.0, 0.0, 100.0), 120.0);
+
+				// if(s.hit(r, 0.00001, t))
+				if (s.hit(r))
+				{
+					p.color = rgb(1.0, 0, 0);
+				} else
+					{
+					if (u.hit(r))
+					{
+						p.color = rgb(0, 0, 1.0);
+					} else
+					{
+						p.color = rgb(1.0, 1.0, 1.0);
+					}
 				}
+				
+ 
+
+				// compute color for pixel
+				// if ( ((x/checkersize)%2) != ((y/checkersize)%2)) {
+				//	p.color = rgb(1.0, 1.0, float(x)/gw.height());
+				// } else {
+				//	p.color = rgb(1.0, 0.0, float(y)/gw.width());
+				// }
 
 				// write pixel to output window
 				gw.write(p);
@@ -65,6 +96,10 @@ private : // attributes
 
 int main(int argc, char* argv[])
 {
+
+	// sphere* sphr_ptr = new sphere(math3d::point(0, 0, 0), 1);
+	// camera* cam = new camera(45.0); 
+
 	// set resolution and checkersize
 	const std::size_t width = 400;
 	const std::size_t height = 400;

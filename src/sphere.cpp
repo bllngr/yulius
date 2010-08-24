@@ -3,7 +3,7 @@
 #include <cmath>
 
 
-	sphere::sphere(math3d::point const& p, double const& r)
+	sphere::sphere(math3d::point const& p, double r)
 	: radius_(r), center_(p)
 	{
 	}
